@@ -55,3 +55,21 @@ These are command line tools commands that I find helpful when performing RE
 >    `> IOLI Crackme Level 0x01`
 >
 >    `> Password: Password OK :)`
+
+#### Let's set an environment variable!
+
+> So for crackme0x06 we need to get this below code to return a 1:
+>
+> `    iVar1 = strncmp(*(char **)(iVar1 + mainP3),"LOLO",3);
+>   while (iVar1 != 0);
+>   return 1;`
+>
+> In this instance we are casting `(iVar1 + mainP3)` as a character and then checking to see if it matches the first 3 char's of `"LOLO"`.
+>
+> `iVar1` is a local int variable, while `mainP3` is a parameter passed into the original main function.
+>
+> In order for this to work we need to set the environment variable `LOL`
+>
+> Which is simply done by the following code:
+>
+> `export LOL=something` 
