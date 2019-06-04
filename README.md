@@ -1,6 +1,6 @@
 # RE-Help
 
-These are command line tools commands that I find helpful when performing RE
+These are command line tools / commands that I find helpful when performing RE
 
 #### FIRST OFF is how we can easily decode HEX values on the command line as Strings.
 
