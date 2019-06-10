@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <cmath>
 
@@ -17,3 +18,6 @@ int main()
 
     return 0;
 }
+=======
+#include <iostream>
+>>>>>>> 02e72d24cad27b8682dc710a9fed283b09902d15
