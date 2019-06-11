@@ -6,6 +6,8 @@ You can find the linke to the course here: [course link:](https://www.youtube.co
 
 You can find all of my source code throughout the course under the **practice/** directory
 
+You can find all of my personal practice attampts under the **independant/** directory
+
 *It is mentioned to use the "codeblocks" IDE. You do not have to. I used vscode throughout and compiled my code using `g++ -o <CODENAME.> <CODENAME.cpp>`.
 
 This repository is a product of my progress through the course.
