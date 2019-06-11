@@ -1,0 +1,75 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.build_version macos, 10, 14	sdk_version 10, 14
+	.intel_syntax noprefix
+	.globl	_main                   ## -- Begin function main
+	.p2align	4, 0x90
+_main:                                  ## @main
+	.cfi_startproc
+## %bb.0:
+	push	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset rbp, -16
+	mov	rbp, rsp
+	.cfi_def_cfa_register rbp
+	sub	rsp, 80
+	mov	eax, 16
+	mov	edx, eax
+	lea	rdi, [rbp - 32]
+	mov	dword ptr [rbp - 4], 0
+	mov	rcx, qword ptr [rip + L___const.main.buf2]
+	mov	qword ptr [rbp - 32], rcx
+	mov	rcx, qword ptr [rip + L___const.main.buf2+8]
+	mov	qword ptr [rbp - 24], rcx
+	lea	rsi, [rip + L_.str]
+	call	___strcpy_chk
+	lea	rsi, [rbp - 48]
+	lea	rdi, [rip + L_.str.1]
+	mov	qword ptr [rbp - 56], rax ## 8-byte Spill
+	mov	al, 0
+	call	_printf
+	lea	rsi, [rbp - 32]
+	lea	rdi, [rip + L_.str.2]
+	mov	dword ptr [rbp - 60], eax ## 4-byte Spill
+	mov	al, 0
+	call	_printf
+	lea	rsi, [rbp - 48]
+	lea	rdi, [rip + L_.str.3]
+	mov	dword ptr [rbp - 64], eax ## 4-byte Spill
+	mov	al, 0
+	call	_printf
+	lea	rsi, [rbp - 32]
+	lea	rdi, [rip + L_.str.4]
+	mov	dword ptr [rbp - 68], eax ## 4-byte Spill
+	mov	al, 0
+	call	_printf
+	xor	r8d, r8d
+	mov	dword ptr [rbp - 72], eax ## 4-byte Spill
+	mov	eax, r8d
+	add	rsp, 80
+	pop	rbp
+	ret
+	.cfi_endproc
+                                        ## -- End function
+	.section	__TEXT,__literal16,16byte_literals
+	.p2align	4               ## @__const.main.buf2
+L___const.main.buf2:
+	.asciz	"overwriteme\000\000\000\000"
+
+	.section	__TEXT,__cstring,cstring_literals
+L_.str:                                 ## @.str
+	.asciz	"1234567890123456789"
+
+L_.str.1:                               ## @.str.1
+	.asciz	"buf1 val: %s\n"
+
+L_.str.2:                               ## @.str.2
+	.asciz	"buf2 val: %s\n"
+
+L_.str.3:                               ## @.str.3
+	.asciz	"buf1 addr: %p\n"
+
+L_.str.4:                               ## @.str.4
+	.asciz	"buf2 addr: %p\n"
+
+
+.subsections_via_symbols
