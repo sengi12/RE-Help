@@ -80,7 +80,7 @@ EXAMPLES:
 EXAMPLE: 
 
 ```x86 assembly
-55							push %rbp
+55			push %rbp
 
 48	89	e5			mov %rsp, %rsp <— Desired Breakpoint
 
