@@ -90,9 +90,9 @@ EXAMPLE:
 ---
 
 ```x86 assembly
-55							push %rbp
+55				push %rbp
 
-48<	89	e5			??? #remember 48
+48<	89	e5		??? #remember 48
 
 48	83	ec	10	sub $0x10,%rsp
 ```
@@ -100,9 +100,9 @@ EXAMPLE:
 ---
 
 ```x86 assembly
-55							push %rbp
+55				push %rbp
 
-cc	89	e5			int3 				# modify the binary, still remember 48
+cc	89	e5		int3		# modify the binary, still remember 48
 
 48	83	ec	10	sub $0x10,%rsp
 ```
