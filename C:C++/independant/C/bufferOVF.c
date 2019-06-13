@@ -24,7 +24,7 @@ int main(void)
     char buf1[16];
     //uninitialized
 
-    strcpy(buf1, "1234567890");
+    strncpy(buf1, "1234567890", 3);
     //writing to buf1
 
     printf("buf1 val: %s\n", buf1);
@@ -34,18 +34,18 @@ int main(void)
 
     // TO RUN : gcc -o bufferOVF. bufferOVF.c -fno-stack-protector && clear && ./bufferOVF.
 
-    /*
+    
     //heap corruption
     char *buf3 = malloc(12*sizeof(char));
     char *buf4 = malloc(12*sizeof(char));
 
     strcpy(buf4, "mywordshere");
-    strcpy(buf3, "12345678901234567890123456");
+    strncpy(buf3, "12345678901234567890123456", 5);
 
     printf("buf3 val: %s\n", buf3);
     printf("buf4 val: %s\n", buf4);
     printf("buf3 addr %p\n", (void *)buf3);
     printf("buf4 addr %p\n", (void *)buf4);
-     */
+     
 }
 
