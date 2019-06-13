@@ -24,7 +24,7 @@ int main(void)
     char buf1[16];
     //uninitialized
 
-    strcpy(buf1, "1234567890123456");
+    strcpy(buf1, "1234567890");
     //writing to buf1
 
     printf("buf1 val: %s\n", buf1);
