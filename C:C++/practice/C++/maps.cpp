@@ -32,13 +32,49 @@ int main()
     // assigning the elements from quiz1 to quiz2
     map<int, int> quiz2(quiz1.begin(), quiz1.end());
 
-    //print all elements from the map quiz2 
+    // print all elements from the map quiz2 
     cout << "\nThe Map quiz2 after " 
          << "assign from quiz1 is : \n";
     cout << "\tKEY\tELEMENT\n";
     for (itr = quiz2.begin(); itr != quiz2.end(); itr++)
     {
         cout << '\t' << itr->first 
+             << '\t' << itr->second << '\n';
+    }
+    cout << endl;
+    
+    // remove all elements with key = 4
+    int num;
+    num =  quiz2.erase(4);
+    cout << "\nquiz2.erase(4) : "
+         << num << " removed \n"
+         << "\tKEY\tELEMENT\n";
+    for (itr = quiz2.begin(); itr != quiz2.end(); itr++)
+    {
+        cout << '\t' << itr->first
+             << '\t' << itr->second << '\n';
+    }
+    cout << endl;
+
+    // remove all elements = 50
+    int elm;
+    itr = quiz2.begin();
+    while( itr != quiz2.end() ) {
+        if (itr->second == 50)
+        {
+            itr = quiz2.erase(itr);
+            elm++;
+            cout << "ERASED";
+        }
+        else itr++;
+    }
+
+    cout << "\nquiz2.erase(itr) = 50 : "
+         << elm << " removed \n"
+         << "\tKEY\tELEMENT\n";
+    for (itr = quiz2.begin(); itr != quiz2.end(); itr++)
+    {
+        cout << '\t' << itr->first
              << '\t' << itr->second << '\n';
     }
     cout << endl;
