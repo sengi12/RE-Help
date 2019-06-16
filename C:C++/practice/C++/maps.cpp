@@ -24,10 +24,24 @@ int main()
     cout << "\tKEY\tELEMENT\n";
     for (itr = quiz1.begin(); itr != quiz1.end(); itr++)
     {
-        cout << '\t' << itr->first << '\t' << itr->second << '\n';
+        cout << '\t' << itr->first 
+             << '\t' << itr->second << '\n';
     }
     cout << endl;
 
+    // assigning the elements from quiz1 to quiz2
+    map<int, int> quiz2(quiz1.begin(), quiz1.end());
+
+    //print all elements from the map quiz2 
+    cout << "\nThe Map quiz2 after " 
+         << "assign from quiz1 is : \n";
+    cout << "\tKEY\tELEMENT\n";
+    for (itr = quiz2.begin(); itr != quiz2.end(); itr++)
+    {
+        cout << '\t' << itr->first 
+             << '\t' << itr->second << '\n';
+    }
+    cout << endl;
     
 
     return 0;
