@@ -11,11 +11,11 @@ int main()
 
     // Insert elements in random order
     quiz1.insert(pair<int, int>(1, 40));
-    quiz1.insert(pair<int, int>(2, 30));
+    quiz1.insert(pair<int, int>(2, 50));
     quiz1.insert(pair<int, int>(3, 60));
     quiz1.insert(pair<int, int>(4, 20));
     quiz1.insert(pair<int, int>(5, 50));
-    quiz1.insert(pair<int, int>(6, 50));
+    quiz1.insert(pair<int, int>(6, 55));
     quiz1.insert(pair<int, int>(7, 10));
 
     // printing map quiz1 
@@ -62,13 +62,14 @@ int main()
     while( itr != quiz2.end() ) {
         if (itr->second == 50)
         {
+            cout << "\n" << itr->first << " ERASED";
             itr = quiz2.erase(itr);
             elm++;
-            cout << "ERASED";
         }
         else itr++;
     }
 
+    // shows updated map with # of removed students
     cout << "\nquiz2.erase(itr) = 50 : "
          << elm << " removed \n"
          << "\tKEY\tELEMENT\n";
@@ -78,7 +79,18 @@ int main()
              << '\t' << itr->second << '\n';
     }
     cout << endl;
-    
+
+    // lower bound and upper bound for map quiz1 key = 5
+    cout << "quiz1.lower_bound(5) : "
+         << "\tKEY = ";
+    cout << quiz1.lower_bound(5)->first << '\t';
+    cout << "\tELEMENT = "
+         << quiz1.lower_bound(5)->second << endl;
+    cout << "quiz1.upper_bound(5) : "
+         << "\tKEY = "
+         << quiz1.upper_bound(5)->first << '\t'
+         << "\tELEMENT = "
+         << quiz1.upper_bound(5)->second << endl;
 
     return 0;
 }
