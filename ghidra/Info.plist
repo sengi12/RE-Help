@@ -11,7 +11,7 @@
 				<string>BT</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>010 Editor Binary Template</string>
+			<string>Ghidra SRE Template</string>
 			<key>CFBundleTypeIconFile</key>
 			<string>template.icns</string>
 			<key>CFBundleTypeRole</key>
@@ -28,7 +28,7 @@
 				<string>1SC</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>010 Editor Script File</string>
+			<string>Ghidra Script File</string>
 			<key>CFBundleTypeIconFile</key>
 			<string>script.icns</string>
 			<key>CFBundleTypeRole</key>
