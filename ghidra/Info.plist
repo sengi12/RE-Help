@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>bt</string>
+				<string>BT</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>010 Editor Binary Template</string>
+			<key>CFBundleTypeIconFile</key>
+			<string>template.icns</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>1sc</string>
+				<string>1SC</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>010 Editor Script File</string>
+			<key>CFBundleTypeIconFile</key>
+			<string>script.icns</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>hex</string>
+				<string>HEX</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Intel Hex File</string>
+			<key>CFBundleTypeIconFile</key>
+			<string>file.icns</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>s19</string>
+				<string>s28</string>
+				<string>s37</string>
+				<string>S19</string>
+				<string>S28</string>
+				<string>S37</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Motorola S-Records</string>
+			<key>CFBundleTypeIconFile</key>
+			<string>file.icns</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Generic File</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>****</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>General File</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.text</string>
+				<string>public.plain-text</string>
+				<string>public.image</string>
+				<string>public.script</string>
+				<string>public.data</string>
+				<string>public.item</string>
+				<string>public.content</string>
+				<string>public.executable</string>
+				<string>public.source-code</string>
+				<string>public.xml</string>
+				<string>public.archive</string>
+				<string>public.audio</string>
+				<string>public.movie</string>
+				<string>public.url</string>
+				<string>public.font</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
+	<key>CFBundleIconFile</key>
+	<string>Ghidra.png</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleGetInfoString</key>
+	<string>9.1.1, Copyright NSA</string>
+	<key>CFBundleSignature</key>
+	<string>GHID</string>
+	<key>CFBundleVersion</key>
+	<string>9.1.1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>9.1.1</string>
+	<key>CFBundleExecutable</key>
+	<string>Ghidra</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>NSA</string>
+</dict>
+</plist>

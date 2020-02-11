@@ -1,4 +1,6 @@
 # OS Generated Files
 ####################
 .vscode/
+.DS_Store
+.git
 PracticeCource.mp4
