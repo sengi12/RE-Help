@@ -63,7 +63,18 @@
    "${SCRIPT_DIR}"/../Resources/support/launch.sh bg Ghidra "${MAXMEM}" "" ghidra.GhidraRun "$@"
    ```
 
-   Exit vim and save. `ESC + :wq`
+   Before we leave our text editor, lets make one last change. The above line of code will actually take in a command line argument, looking for a project file. If we were to run it as is we'd get the following "error" message every time:
+
+   <img src="./img/error.png" alt="error" style="zoom:50%;" />
+
+   To fix this, we simlpy need to remove the `"$@"` at the end of the command:
+
+   ```bash
+   # Launch Ghidra
+   "${SCRIPT_DIR}"/../Resources/support/launch.sh bg Ghidra "${MAXMEM}" "" ghidra.GhidraRun
+   ```
+
+   This will allow ghidra to open normally. Exit vim and save. `ESC + :wq`
 
 10. Last step so that the app has a nice logo. User your file explorer to navigate to the Applications folder. Scroll to the Ghidra.app folder and `left click` on it. Select `Get Info`.
 
