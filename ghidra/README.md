@@ -112,3 +112,31 @@ export PATH=/Applications/Ghidra.app/Contents/MacOS:$PATH
 ```
 
 Now the command line call will be `Ghidra` instead of `ghidraRun`
+
+## Linux
+
+Linux installation is simple and only requires a few things be in the right location. 
+
+1. First off you need an Icon which we provide in the `Linux` sub directory.
+
+2. Secondly and most importantly you need to have a `ghidra.desktop` file located at `/usr/share/applications/` (Ubuntu 18.04).
+
+   Here is an example of the `ghidra.desktop` file I've provided.
+
+   ```assembly
+   #!/usr/bin/env xdg-open
+   [Desktop Entry]
+   Name=Ghidra
+   GenericName=Ghidra
+   Comment=Rawr
+   Exec=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidraRun
+   Icon=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidra.png
+   Terminal=false
+   Type=Application
+   Categories=Development;Java;
+   Keywords=ida;binaryninja;binja;radare;r2;cutter;re;asm;disasm;
+   ```
+
+3. Go ahead and change the `Exec` and `Icon` fields to match your installation path. As you can see, I think it's easier to just keep the `ghidra.png` in that same folder.
+
+4. Once this is done, you should have the ghidra icon pop up in your applications!

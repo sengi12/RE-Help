@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Ghidra
+GenericName=Ghidra
+Comment=Rawr
+Exec=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidraRun
+Icon=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidra.png
+Terminal=false
+Type=Application
+Categories=Development;Java;
+Keywords=ida;binaryninja;binja;radare;r2;cutter;re;asm;disasm;
