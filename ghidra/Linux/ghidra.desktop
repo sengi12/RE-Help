@@ -3,8 +3,8 @@
 Name=Ghidra
 GenericName=Ghidra
 Comment=Rawr
-Exec=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidraRun
-Icon=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidra.png
+Exec=/home/sengi/bin/ghidra/ghidra_12.1.3_PUBLIC/ghidraRun
+Icon=/home/sengi/bin/ghidra/ghidra_12.1.3_PUBLIC/Ghidra.png
 Terminal=false
 Type=Application
 Categories=Development;Java;

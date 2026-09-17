@@ -4,14 +4,16 @@
 
 1. First be sure to download Ghidra from: https://ghidra-sre.org
 
+   Ghidra 12.1.3 is used as the example version throughout this page; substitute whatever version you installed. Ghidra 12 needs a JDK 21 install (`ghidraRun` will tell you if it can't find one).
+
 2. After unzipping the archive, you'll be greeted by a folder with the following name
 
-   - :file_folder: ghidra_x.x.x_PUBLIC (the x's represent the version number)
+   - :file_folder: ghidra_12.1.3_PUBLIC
 
 3. Move this folder from your Downloads folder to your Applications folder. Then navigate to that folder.
 
    ```bash
-   Downloads$ mv ./ghidra_x.x.x_PUBLIC /Applications/
+   Downloads$ mv ./ghidra_12.1.3_PUBLIC /Applications/
    Downloads$ cd /Applications
    ```
 
@@ -19,14 +21,14 @@
 
    ```bash
    Applications$ mkdir -p Ghidra.app/Contents/
-   Applications$ mv ./ghidra_x.x.x_PUBLIC /Ghidra.app/Contents/
+   Applications$ mv ./ghidra_12.1.3_PUBLIC ./Ghidra.app/Contents/
    Applications$ cd Ghidra.app/Contents/
    ```
 
-5. Once inside, now rename the `ghidra_x.x.x_PUBLIC` directory to `Resources`. Make a new directory titled `MacOS` while inside Contents.
+5. Once inside, now rename the `ghidra_12.1.3_PUBLIC` directory to `Resources`. Make a new directory titled `MacOS` while inside Contents.
 
    ```bash
-   Contents$ mv ./ghidra_x.x.x_PUBLIC ./Resources
+   Contents$ mv ./ghidra_12.1.3_PUBLIC ./Resources
    Contents$ mkdir MacOS
    ```
 
@@ -56,11 +58,11 @@
    MacOS$ vim Ghidra
    ```
 
-   We need to change the line underneath `Launch Ghidra` to read the following since we moved it from its original location.
+   We need to change the line underneath `Launch Ghidra` to read the following since we moved it from its original location (`support/launch.sh` becomes `../Resources/support/launch.sh`; the other arguments stay as Ghidra 12 ships them).
 
    ```bash
    # Launch Ghidra
-   "${SCRIPT_DIR}"/../Resources/support/launch.sh bg Ghidra "${MAXMEM}" "" ghidra.GhidraRun "$@"
+   "${SCRIPT_DIR}"/../Resources/support/launch.sh bg jdk Ghidra "${GHIDRA_GUI_MAXMEM}" "${VMARG_LIST}" ghidra.GhidraRun "$@"
    ```
 
    Before we leave our text editor, lets make one last change. The above line of code will actually take in a command line argument, looking for a project file. If we were to run it as is we'd get the following "error" message every time:
@@ -71,7 +73,7 @@
 
    ```bash
    # Launch Ghidra
-   "${SCRIPT_DIR}"/../Resources/support/launch.sh bg Ghidra "${MAXMEM}" "" ghidra.GhidraRun
+   "${SCRIPT_DIR}"/../Resources/support/launch.sh bg jdk Ghidra "${GHIDRA_GUI_MAXMEM}" "${VMARG_LIST}" ghidra.GhidraRun
    ```
 
    This will allow ghidra to open normally. Exit vim and save. `ESC + :wq`
@@ -117,9 +119,9 @@ Now the command line call will be `Ghidra` instead of `ghidraRun`
 
 Linux installation is simple and only requires a few things be in the right location. 
 
-1. First off you need an Icon which we provide in the `Linux` sub directory.
+1. First off you need an icon. The Ghidra release zip does not ship a PNG (only a Windows `.ico`), so use the `Ghidra.png` we provide in the `Linux` sub directory and copy it into your Ghidra install folder.
 
-2. Secondly and most importantly you need to have a `ghidra.desktop` file located at `/usr/share/applications/` (Ubuntu 18.04).
+2. Secondly and most importantly you need to have a `ghidra.desktop` file located at `/usr/share/applications/` (system-wide) or `~/.local/share/applications/` (just your user).
 
    Here is an example of the `ghidra.desktop` file I've provided.
 
@@ -129,14 +131,14 @@ Linux installation is simple and only requires a few things be in the right loca
    Name=Ghidra
    GenericName=Ghidra
    Comment=Rawr
-   Exec=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidraRun
-   Icon=/home/sengi/bin/ghidra/ghidra_9.1.2_PUBLIC/ghidra.png
+   Exec=/home/sengi/bin/ghidra/ghidra_12.1.3_PUBLIC/ghidraRun
+   Icon=/home/sengi/bin/ghidra/ghidra_12.1.3_PUBLIC/Ghidra.png
    Terminal=false
    Type=Application
    Categories=Development;Java;
    Keywords=ida;binaryninja;binja;radare;r2;cutter;re;asm;disasm;
    ```
 
-3. Go ahead and change the `Exec` and `Icon` fields to match your installation path. As you can see, I think it's easier to just keep the `ghidra.png` in that same folder.
+3. Go ahead and change the `Exec` and `Icon` fields to match your installation path and version. As you can see, I think it's easier to just keep the `Ghidra.png` in that same folder.
 
 4. Once this is done, you should have the ghidra icon pop up in your applications!
